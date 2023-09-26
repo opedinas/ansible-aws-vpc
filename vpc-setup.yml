@@ -3,7 +3,7 @@
   gather_facts: False
   tasks:
      - name: Import VPC Variables
-       include_vars: /ansible-aws-vpc/vars/ansible_setup
+       include_vars: /ansible-aws-vpc/vars/ansible_vpc
 
 
      - name: Create vprofile VPC
