@@ -6,7 +6,7 @@
        include_vars: vars/ansible_vpc
 
 
-     - name: Create vprofile VPC
+     - name: create vprofile VPC
        ec2_vpc_net:
          name: "{{vpc_name}}"
          cidr_block: "{{vpcCidr}}"
