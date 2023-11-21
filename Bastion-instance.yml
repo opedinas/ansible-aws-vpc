@@ -2,7 +2,6 @@
 - hosts: localhost
   connection: local
   gather_facts: False
-  become: True
   tasks:
         - name: Import VPC setup variable
           include_vars: vars/bastion_setup
