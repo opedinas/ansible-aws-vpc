@@ -14,6 +14,8 @@
             name: vprofile-key
             region: "{{region}}"
           register: key_out
+        - debug:
+            var: "{{key_out}}"
 
 
         - name: Save private key into file bastion-key.pem
@@ -22,6 +24,7 @@
             dest: "./bastion-key.pem"
             mode: 0600
           when: key_out.changed
+
 
 
         - name: Create sec Grp for bastion host
