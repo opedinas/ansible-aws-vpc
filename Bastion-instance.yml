@@ -41,7 +41,7 @@
           register: BastionSG_out
 
         - name: Creating Bastion Host
-          ec2_instance:
+          ec2:
             key_name: key_out
             region: "{{region}}"
             instance_type: t2.micro
