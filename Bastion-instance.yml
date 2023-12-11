@@ -42,7 +42,7 @@
 
         - name: Creating Bastion Host
           ec2:
-            key_name: key_out
+            key_name: "vprofile-key"
             region: "{{region}}"
             instance_type: t2.micro
             image: "{{bastion_ami}}"
