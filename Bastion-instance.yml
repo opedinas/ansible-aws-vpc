@@ -6,7 +6,7 @@
         - name: Import VPC setup variable
           include_vars: vars/vpc_setup
 
-        da- name: Import VPC setup variable
+        - name: Import VPC setup variable
           include_vars: vars/vpc_setup
 
         - name: Create vprofile ec2 key
