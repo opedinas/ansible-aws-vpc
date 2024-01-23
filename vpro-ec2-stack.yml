@@ -1,0 +1,7 @@
+---
+- name: setup vprofile stack
+  host: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+    nane: import vpc_setup variables
