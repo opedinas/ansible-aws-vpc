@@ -9,4 +9,5 @@ privsub3id: subnet-0baca0468cbc61542
 igwid: igw-04dfbdfe81ee84d83
 pubRTid: rtb-0c0721d02c86f123c
 NATGWid: nat-09014f3ce801801e0
-privRTid: rtb-04f2a96fac19ddd12 
+privRTid: rtb-04f2a96fac19ddd12
+BastionSGid:
