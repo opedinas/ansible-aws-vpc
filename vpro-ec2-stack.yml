@@ -63,7 +63,7 @@
         name: vproStack-sg
         description: Allow port 22 from everywhere and all port within sg
         region: "{{region}}"
-        vp_id: "{{vpcid}}"
+        vpc_id: "{{vpcid}}"
         purge_rules: no
         rules:
            - proto: all
