@@ -29,15 +29,15 @@
         description: Allow port 80 from  everywhere and all port within sg
         region: "{{region}}"
         vpc_id: "{{vpcid}}"
-        rules:
-          - proto: tcp
+        rule:
+          - Proto: tcp
             from_port: 80
             to_port: 80
             cidr_ip: 0.0.0.0/0
       register: vproELBSG_out
 
 
-    - name: Create Security Group for Vprostack
+    - name: Create Security Group for load Balancer
       ec2_group:
         name: vproELB-sg
         description: Allow port 22 from everywhere and all port within sg
@@ -45,7 +45,7 @@
         vpc_id: "{{vpcid}}"
         purge_rules: no
         rules:
-          - proto: tcp
+          - Proto: tcp
             from_port: 80
             to_port: 80
             group_id: "{{vproELBSG_out.group_id}}"
@@ -64,6 +64,6 @@
         vp_id: "{{vpcid}}"
         purge_rules: no
         rules:
-           - proto: all
+           - Proto: all
              group_id: "{{vproStackSG_out.group_id}}"
 
