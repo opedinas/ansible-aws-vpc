@@ -89,7 +89,7 @@
             Owner: Devops Team
           group_id: "{{vproStackSG_out.group_id}}"
           vpc_subnet_id: "{{privsub1id}}"
-        register: web01_out
+      register: web01_out
 
     - name: Creating Tomcat app01
       ec2:
@@ -110,7 +110,7 @@
             Owner: Devops Team
           group_id: "{{vproStackSG_out.group_id}}"
           vpc_subnet_id: "{{privsub1id}}"
-        register: app01_out
+      register: app01_out
 
     - name: Creating memcache mc01
       ec2:
@@ -131,7 +131,7 @@
             Owner: Devops Team
           group_id: "{{vproStackSG_out.group_id}}"
           vpc_subnet_id: "{{privsub1id}}"
-        register: mc01_out
+      register: mc01_out
 
 
     - name: Creating RabbitMQ rmq01
@@ -153,7 +153,7 @@
             Owner: Devops Team
           group_id: "{{vproStackSG_out.group_id}}"
           vpc_subnet_id: "{{privsub1id}}"
-        register: rmq01_out
+      register: rmq01_out
 
     - name: Creating Mysql db01
       ec2:
@@ -174,7 +174,7 @@
             Owner: Devops Team
           group_id: "{{vproStackSG_out.group_id}}"
           vpc_subnet_id: "{{privsub1id}}"
-        register: db01_out
+      register: db01_out
 
 
     - debug:
